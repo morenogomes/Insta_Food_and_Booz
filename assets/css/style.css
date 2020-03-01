@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color: salmon; */
+    
+    
+}
+
+header 
+
+span {
+    font-size: 90px;  
+}
+
+header {
+    background-color: salmon;
+}
+
+section {
+    background-color: sandybrown;
+}
+
+.block1 {
+    font-family: 'Pacifico', sans-serif, serif;
+    text-shadow: 2px 2px rgb(177, 91, 81);
+}
+
+.welcome {
+    /* font-family: 'Pacifico', sans-serif, serif; */
+    font-size: 40px;
+}
+
+.logo {
+    /* font-family: 'Pacifico', sans-serif, serif; */
+    font-size: 70px;
+}
+
+.block1 {
+    text-align: center;
+}
+
+
+.button {
+    background-image: url(https://www.gmdietworks.com/html/uploads/2011/10/gm-diet-alcohol.jpg);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+.ageRequirement {
+    text-shadow:2px 2px black;
+    color: seashell;
+    font-family: 'Anton', serif ;
+    font-size: 60px;
+    padding: 100px 50px 100px 50px;
+    /* margin: 100px; */
+    border: 10px solid black;
+    width: 200px;
+    /* height: 200px; */
+}
