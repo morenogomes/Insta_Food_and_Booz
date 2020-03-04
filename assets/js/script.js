@@ -9,10 +9,10 @@ $(document).ready(function(){
         console.log(mealTypeSelection);
 
         window.location.href = "./insta-choice.html";
-
-        
-        })
-
+    })
+    $('#answer').on('click', 'img', function(event){
+        console.log("did this really work??? ", event.target.id)
+    });
         
 })
 
@@ -41,10 +41,13 @@ $("#btnSearch").on("click", function() {
   
       for (let index = 0; index < response.meals.length; index++) {
         //$("#answer").append("<p>"+response.meals[index].strMeal+"</p>")
-        $("#answer").append("<p><a href=" +response.meals[index].strMealThumb +">" +response.meals[index].strMeal +"</a></p>");
+        $("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
+        //$("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+"><a href=./index.html>"+response.meals[index].strMeal +"</a></p>");
         $("#answer").append("<p><img src="+response.meals[index].strMealThumb+" alt="+response.meals[index].strMeal +"></p>");
       }
     });
   });
   
+
+
 
