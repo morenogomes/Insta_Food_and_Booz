@@ -42,11 +42,32 @@ $(document).ready(function(){
 
         }).then(function(response){
 
-            console.log(response.drinks)
+            console.log(response.drinks);
+
+            
+
+           var alcoholSuggestion = Math.floor(Math.random() * response.drinks.length)
+
+          
+
+            console.log("how a about a glass of "+response.drinks[alcoholSuggestion].strIngredient1+" with that?")
+            
+            var cocktailURL ="https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="+response.drinks[alcoholSuggestion].strIngredient1+"&api-key=1"
+
+            $.ajax({
+                url: cocktailURL,
+                method: "GET"
+
+            }).then(function(response){
+
+              console.log(response)
+
+            })
+
 
         })
 
-      //var alcoholSuggestion = 
+      
 
 
     });
