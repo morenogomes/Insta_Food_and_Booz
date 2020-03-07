@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page HTML/CSS</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Bowlby+One+SC|Lalezar|Pacifico&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous"> -->
+    <script src="https://kit.fontawesome.com/61ab0d4a15.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href= "assets/css/instaTestsCratsch.css"> -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href= "assets/css/style.css">
+</head>
+<body class="video">
+
+<!-- =============================== NAVBAR ======================================================== -->
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title ">
+        Insta Food and Buuz
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href= "timeselection.html">Insta Fuud and Booz</a>
+      <!-- <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
+        <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
+        <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a> -->
+        <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+    </div>
+  </div>
+
+<!-- =============================== Container ======================================================== -->
+    
+<!-- =============================== Introduction ======================================================== -->
+
+  <div class="container">
+        <p class="introduction">
+            <span>IFandB</span> is the ultimate interaction beween you and your food desires!
+        </p>
+      <div class="option-container" id="optionContainer">
+      <div class="selectors">
+        <select id="personAmount" class="dropdown select-style">
+          <!-- <select id="personAmount" class="dropdown"> -->
+          
+                <option value="1">
+                  1 person
+                </option>
+                <option value="2">
+                  2 persons
+                </option>
+                <option value="3">
+                  3 persons
+                </option>
+                <option value="4">
+                  4 persons
+                </option>
+                <option value="more">
+                  5+ persons
+                </option>
+          </select><br>
+    
+          <select id="foodRestriction" class="dropdown select-style">
+                <option value="vegan">
+                  Vegan 
+                </option>
+                <option value="vegetarian">
+                  Vegetarian
+                </option>
+                <option value="pescatarian">
+                  Pescatarian
+                </option>
+                <option value="omnivore">
+                    Omnivore 
+                </option>
+          </select><br>
+    
+          <select id="search-term" class="dropdown select-style">
+              
+            
+          </select><br>
+          
+          
+        </div>
+        
+        <selection>
+          <div id="">
+            <div>
+              <label for="exampleFormControlSelect1"></label>
+              <label for="exampleFormControlInput1"><Search-Term></Search-Term></label>
+              <input class="form-control"  placeholder="Seach">
+            </div>
+              <!-- <button id="btnSearch" class="search-button">search</button> -->
+              <button id="btnSearch" class="pure-button pure-button-active">Search
+                <i class="fas fa-search"></i>
+              </button>            
+          </div>
+
+          <h1 id="answer">Hungry?</h1>
+        </section>
+    </div>
+  <div>
+    
+</body>
+  <script src= "assets/js/isntaTestsCratsh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js" ></script>
+</html>
