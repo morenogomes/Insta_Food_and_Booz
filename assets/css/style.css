@@ -2,9 +2,6 @@
     margin: 0px;
     padding: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* background-color: salmon; */
-    
-    
 }
 
 span {
@@ -43,7 +40,6 @@ section {
     text-align: center;
 }
 
-
 .button {
     background-image: url(https://www.gmdietworks.com/html/uploads/2011/10/gm-diet-alcohol.jpg);
     position: fixed;
@@ -55,16 +51,12 @@ section {
     
 }
 
-
-
 .ageRequirement {
     text-shadow:2px 2px black;
     color: seashell;
     font-family: 'Anton', serif ;
     font-size: 60px;
     padding: 100px 50px 100px 50px;
-    /* margin: 100px; */
     border: 10px solid black;
     width: 200px;
-    /* height: 200px; */
 }
