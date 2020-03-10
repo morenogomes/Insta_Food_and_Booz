@@ -2,8 +2,28 @@ console.log("hello")
 $(document).ready(function(){
 
   
-
+  var getTypes = "https://www.themealdb.com/api/json/v1/1/list.php?c=list&api-key=1"
   var getAreas = "https://www.themealdb.com/api/json/v1/1/list.php?a=list&api-key=1"
+
+
+  $.ajax({
+
+    url: getTypes,
+    method: "GET"
+    
+  }).then(function(response){
+
+    console.log(response.meals)
+
+    for (let index = 0; index < response.meals.length; index++) {
+      $("#foodRestriction").append("<option>"+ response.meals[index].strCategory + "</option>" )
+      
+    }
+
+
+  })
+
+
 
   $.ajax({
 
@@ -73,13 +93,10 @@ $(document).ready(function(){
 
             //  localStorage.setItem(response.drinks[coc], eventToSave);
 
-            window.location.href = "./ista-page-4.html?mealID="+mealIDforDisplay+"&drinkID="+drinkIDforDisplay;
+           window.location.href = "./ista-page-4.html?mealID="+mealIDforDisplay+"&drinkID="+drinkIDforDisplay;
 
 
-              for (let index = 0; index < response.drinks.length; index++) {
-                $("#drinkImage").append("<li>"+response.drinks[index].strDrink+"</li>");
-                
-              }
+           
 
 
             })
@@ -100,14 +117,37 @@ $(document).ready(function(){
 $("#btnSearch").on("click", function() {
     event.preventDefault();
     $("#answer").empty();
-  
+
+    var typesMealIDS =[]
+    var typeTerm = $("#foodRestriction").val();
     var searchTerm = $("#search-term").val();
+
+    var getTypesMeals = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" +
+    typeTerm +
+    "&api-key=1";
    
   
     var getURL =
       "https://www.themealdb.com/api/json/v1/1/filter.php?a=" +
       searchTerm +
       "&api-key=1";
+
+      $.ajax({
+        url: getTypesMeals,
+        method: "GET"
+      }).then(function(response) {
+        //console.log(response.meals.length)
+    
+        console.log(response)
+    
+        for (let index = 0; index < response.meals.length; index++) {
+          
+          typesMealIDS.push(response.meals[index].idMeal)
+         
+        }
+
+        console.log(typesMealIDS)
+      });
     
     $.ajax({
       url: getURL,
@@ -118,10 +158,21 @@ $("#btnSearch").on("click", function() {
       console.log(response)
   
       for (let index = 0; index < response.meals.length; index++) {
-        //$("#answer").append("<p>"+response.meals[index].strMeal+"</p>")
-        $("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
-        //$("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+"><a href=./index.html>"+response.meals[index].strMeal +"</a></p>");
-        $("#answer").append("<p><img src="+response.meals[index].strMealThumb+" alt="+response.meals[index].strMeal +"></p>");
+      
+
+
+
+        if (typesMealIDS.includes(response.meals[index].idMeal)) {  
+          console.log(response.meals[index].idMeal)
+          $("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
+        
+          $("#answer").append("<p><img src="+response.meals[index].strMealThumb+" alt="+response.meals[index].strMeal +"></p>");
+          
+        }else {"the id it not there " + response.meals[index].idMeal }
+
+      
+
+
       }
     });
   });
