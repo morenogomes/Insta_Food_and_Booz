@@ -8,11 +8,9 @@
 body {
   margin: 0px;
   font-family: 'segoe ui';
-  /* background-color: #808080; */
   background-image: url("https://previews.123rf.com/images/kornienko/kornienko1611/kornienko161100146/69562622-tischdecke-auf-einem-wei%C3%9Fen-holztisch-ansicht-von-oben-blick.jpg");
-
-  /* background-repeat: no-repeat; */
-  /* background-image: url(https://previews.123rf.com/images/klenova/klenova1411/klenova141100167/34111566-food-background-with-wine-and-grape-lots-of-copy-space-.jpg); */
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .center {
@@ -197,6 +195,7 @@ div.container {
   display: block;
   justify-content: center;
   align-content: center;
+  height: 1500px;
 }
 /* center this class */
 .option-container {
@@ -354,7 +353,8 @@ img {
     
   }
   
-  img {
+  /* img {
     margin-bottom: 10px;
-  }
+  } */
+
 }
