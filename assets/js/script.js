@@ -50,8 +50,7 @@ $(document).ready(function(){
         var mealTypeSelection = event.target.id
 
         console.log(mealTypeSelection);
-
-        window.location.href = "./insta-choice.html";
+        window.location.href = "./insta-choice.html?mealtype=" + mealTypeSelection;
     })
     $('#answer').on('click', 'p', function(event){
         console.log("did this really work??? ", event.target.id)
@@ -164,10 +163,13 @@ $("#btnSearch").on("click", function() {
 
         if (typesMealIDS.includes(response.meals[index].idMeal)) {  
           console.log(response.meals[index].idMeal)
-          $("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
-        
-          $("#answer").append("<p><img src="+response.meals[index].strMealThumb+" alt="+response.meals[index].strMeal +"></p>");
+          $("#answer").append(`<div class=menu-choice id=menu${index}></div>`)
+          $(`#menu${index}`).append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
+          // $("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
+          //$("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+"><a href=./index.html>"+response.meals[index].strMeal +"</a></p>");
+          $(`#menu${index}`).append("<p><img src="+response.meals[index].strMealThumb+" alt="+response.meals[index].strMeal +"></p>");
           
+
         }else {"the id it not there " + response.meals[index].idMeal }
 
       
