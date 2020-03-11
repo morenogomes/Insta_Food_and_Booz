@@ -1,87 +1,57 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lalezar', cursive;
-  color: rgb(240, 240, 240);
-  text-decoration: none;
+  font-family: Pacifico, cursive;
 }
 
 body {
   margin: 0px;
   font-family: 'segoe ui';
-  /* background-color: #808080; */
-  background-image: url("https://previews.123rf.com/images/kornienko/kornienko1611/kornienko161100146/69562622-tischdecke-auf-einem-wei%C3%9Fen-holztisch-ansicht-von-oben-blick.jpg");
-
-  /* background-repeat: no-repeat; */
-  /* background-image: url(https://previews.123rf.com/images/klenova/klenova1411/klenova141100167/34111566-food-background-with-wine-and-grape-lots-of-copy-space-.jpg); */
-}
-
-.center {
-  margin-top: 1rem;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
-  text-align: center;
-}
-
-p {
-  margin: 0px;
-}
-
-.brand-color {
-  background-color: rgba(190, 19, 42, 0.911);
+  background-image: url(https://previews.123rf.com/images/klenova/klenova1411/klenova141100167/34111566-food-background-with-wine-and-grape-lots-of-copy-space-.jpg);
+  background-size: cover;
 
 }
-
-/* ======== text font ================ */
-.logo {
-  padding: 10px 10px 10px 10px;
-  font-family: 'Pacifico', cursive;
-}
-
-.introduction {
-  font-size: 35px;
-  color: #fff;
-  text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
-  margin-top: 1rem;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
-  text-align: center;
-  /* background-color: rgba(255, 255, 255, 0.482); */
-  /* border: solid 3px rgba(190, 19, 42, 0.911); */
-  border-radius: 12px;
-
-}
-
-
-/* ======== if we want a video ================ */
-/* .video {
-  position: relative;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.introduction {
+  font-size: 45px;
+  color: rgb(3, 3, 49);
+  text-align: center;
+}
+#over19yes {
+  color: #eeef;
+}
+#answer {
+  text-align: center;
+  font-weight: bolder;
+}
 
-} */
+.block1 {
+  text-align: center;
+  color: rgb(3, 3, 49);
+  font-size: 50px;
+  font-weight: 600;
+  font-family: Pacifico, cursive;
+}
 
-
-/* ======== global classes ================ */
 .selectors{
   width: 150px;
 }
-
 
 .dropdown {
   margin-bottom: 30px;
 }
 
-
-
-/* ======== navigation ================ */
 .nav {
   height: 50px;
   width: 100%;
+  background-color: rgba(190, 19, 42, 0.911);
   position: relative;
 }
 
@@ -104,7 +74,6 @@ p {
 
 .nav > .nav-links {
   display: inline;
-  float: right;
   font-size: 18px;
 }
 
@@ -124,27 +93,19 @@ p {
 }
 
 .container {
- margin: 0px;
+  margin-left: 100px;
 }
 
 .nav-title {
   margin-left: 10px;
 }
 
-/* ============= selectors ================ */
-
-
-
-
-
-/* ============= selectors ================ */
-
 .select-style {
   display: block;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 700;
-  color:  rgba(190, 19, 42, 0.911);
+  color: #444;
   line-height: 1.3;
   padding: .6em 1.4em .5em .8em;
   width: 100%;
@@ -164,12 +125,15 @@ p {
   background-position: right .7em top 50%, 0 0;
   background-size: .65em auto, 100%;
 }
+
 .select-css::-ms-expand {
   display: none;
 }
+
 .select-css:hover {
   border-color: #888;
 }
+
 .select-css:focus {
   border-color: #aaa;
   box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
@@ -179,108 +143,95 @@ p {
 }
 .select-css option {
   font-weight:normal;
-  margin-left: auto;
-  margin-right: auto;
 }
-
 
 div.container {
   /* margin: 0px; */
-  /* display: block;
-  justify-content: center;
-  align-content: center; */
-}
-
-.container-wrap {
-
-  margin: 0px;
+  margin-left: 30px;
   display: block;
   justify-content: center;
   align-content: center;
 }
-/* center this class */
-.option-container {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 100px;
-  width: 8em;
-  /* margin-left: 10%;
-  margin-right: 10%; */
 
+.option-container {
+  margin-left: 0px;
   /* background-color: thistle; */
 }
 
-.search-button {
+button {
   margin-top: 20px;
+  cursor: pointer;
 }
-
-/* ======== button ================ */
 
 .button-large {
   font-size: 110%;
 }
-
-/* ======== DOM elements ================ */
-
-/* h1#answer {
-  margin-left: 100px;    
-}
-*/
-
-/* ======== this wraps the hole menu result  ================ */
-
-.menu-choice {
-  width: 60%;
-  display: inline-block;
-}
-
-#answer {
-  /* width: 700px; */
-  /* width: 50%; */
+.button {
+  text-shadow:2px 2px black;
+  color: seashell;
+  background-color: transparent;
+  font-family: 'Anton', serif ;
+  font-size: 40px;
+  padding: 75px 50px 75px 50px;
+  text-align: center;
+  margin-left: 35%;
+  border: 10px solid salmon;
+  width: 400px;
+  background-image: url(../../images/gm-diet-alcohol.jpg);
+  cursor: default;
 }
 
-/* .answer-display {
-  margin-left: 100px;
-} */
-div.result {
-  margin-left: 0px;
-  /* background-color: hotpink; */
+.foodtypes {
+cursor: pointer;
+text-shadow:2px 2px black;
+color: seashell;
+font-family: 'Anton', serif ;
+font-size: 40px;
+padding: 100px 50px 100px 50px;
+text-align: center;
+margin: 100px;
+border: 10px solid salmon;
+width: 300px;
 }
 
-
-
-/* ======== Food Titel ======== */
-.foodLink {
-  background-color:rgba(190, 19, 42, 0.911);
-  text-shadow: 3px 3px rgba(190, 19, 42, 0.911);
-  padding: 0px 5px 7px 5px;
-  /* padding-left: 5px;
-  padding-bottom: 7px; */
-  font-size: 25px;
-  font-family: 'Pacifico', serif;
-  text-decoration: underline;
-  border-radius: 0px 50px 0px 0px;
-  
+#mealTypeSelection {
+display: inline-block; 
 }
 
-img {
-  margin-bottom: 30px;
-  border-radius: 0px 0px 50px 0px;
+.breakfast {
+float: left;
+margin-left: 10%;
+margin-bottom: 5px;
+background-image: url(../../images/breakfast.jpg);
+background-repeat: no-repeat;
+background-position: center;
 }
 
-÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ index page ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷
+.lunch {
+float: right;
+margin-right: 10%;
+margin-bottom: 5px;
+background-image: url(../../images/lunch.jpg);
+background-repeat: no-repeat;  
 
-.boozeWindow {
-  border: solid rgba(190, 19, 42, 0.911) 6px ;
-  background-color: hotpink;
 }
 
+.snacks {
+float: left;
+margin-left: 10%;
+margin-top: 20px;
+background-image: url(../../images/snacks.png);
 
+}
 
+.dinner {
+float: right;
+margin-right: 10%;
+margin-top: 20px;
+background-image: url(../../images/dinner.jpg);
 
+}
 
-
-/* ======== @media ================ */
 
 @media (max-width:600px) {
   .nav > .nav-btn {
@@ -303,6 +254,7 @@ img {
     width: 25px;
     height: 10px;
     border-top: 2px solid #eee;
+    font-family: 'Pacifico', cursive;
   }
   .nav > .nav-links {
     position: absolute;
@@ -325,36 +277,5 @@ img {
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
-  }
-  .introduction {
-    font-size: medium;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .container {
-    /* margin: -90px;
-     */
-  }
-  
-  #answer {
-    width: 100%;
-  }
-
-  .answer-display {
-    margin: 70px 0px;
-  }
-
-  .foodLink {
-    /* background-color: hotpink; */
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    font-size: 20px;
-    
-  }
-  
-  img {
-    margin-bottom: 10px;
   }
 }
