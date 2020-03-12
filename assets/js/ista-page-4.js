@@ -27,10 +27,11 @@ $(document).ready(function(){
         for (let index = 1; index < 20; index++) {
 
                 var ingredient = "strIngredient"+index;
+                var measure = "strMeasure"+index;
 
                 if(response.meals[0][ingredient]){
                     // $("#igredientsFood").append("<li>"+res^ponse.meals[0][ingredient]+"</li>") 
-                    $("#igredientsFood").append( '<tr><td>' + response.meals[0][ingredient] + '</td></tr>' );
+                    $("#igredientsFood").append( '<tr><td>' + response.meals[0][ingredient] +"</td><td>" + response.meals[0][measure]+ '</td></tr>' );
                 }
 
            
@@ -57,10 +58,12 @@ $(document).ready(function(){
         for (let index = 1; index < 20; index++) {
 
             var ingredient = "strIngredient"+index;
+            var measure = "strMeasure"+index;
+
 
             if(response.drinks[0][ingredient]){
                 // $("#igredientsDrink").append("<li>"+response.drinks[0][ingredient]+"</li>") 
-                $("#igredientsDrink").append( '<tr><td>' + response.drinks[0][ingredient] + '</td></tr>' )
+                $("#igredientsFood").append( '<tr><td>' + response.drinks[0][ingredient] +"</td><td>" + response.drinks[0][measure]+ '</td></tr>' );
             }
 
        
