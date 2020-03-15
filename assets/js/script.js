@@ -108,31 +108,48 @@ $(document).ready(function(){
 
     });
         
-})
 
 
 
 
-$("#btnSearch").on("click", function() {
-    event.preventDefault();
-    $("#answer").empty();
 
-    var typesMealIDS =[]
-    var typeTerm = $("#foodRestriction").val();
-    var searchTerm = $("#search-term").val();
+  $("#btnSearch").on("click", function() {
+      event.preventDefault();
+      $("#answer").empty();
 
-    var getTypesMeals = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" +
-    typeTerm +
-    "&api-key=1";
-   
-  
-    var getURL =
-      "https://www.themealdb.com/api/json/v1/1/filter.php?a=" +
-      searchTerm +
+      var typesMealIDS =[]
+      var typeTerm = $("#foodRestriction").val();
+      var searchTerm = $("#search-term").val();
+
+      var getTypesMeals = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" +
+      typeTerm +
       "&api-key=1";
+    
+    
+      var getURL =
+        "https://www.themealdb.com/api/json/v1/1/filter.php?a=" +
+        searchTerm +
+        "&api-key=1";
 
+        $.ajax({
+          url: getTypesMeals,
+          method: "GET"
+        }).then(function(response) {
+          //console.log(response.meals.length)
+      
+          console.log(response)
+      
+          for (let index = 0; index < response.meals.length; index++) {
+            
+            typesMealIDS.push(response.meals[index].idMeal)
+          
+          }
+
+          console.log(typesMealIDS)
+        });
+      
       $.ajax({
-        url: getTypesMeals,
+        url: getURL,
         method: "GET"
       }).then(function(response) {
         //console.log(response.meals.length)
@@ -140,45 +157,28 @@ $("#btnSearch").on("click", function() {
         console.log(response)
     
         for (let index = 0; index < response.meals.length; index++) {
-          
-          typesMealIDS.push(response.meals[index].idMeal)
-         
+        
+
+
+
+          if (typesMealIDS.includes(response.meals[index].idMeal)) {  
+            console.log(response.meals[index].idMeal)
+            $("#answer").append(`<div class=menu-choice id=menu${index}></div>`)
+            $(`#menu${index}`).append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
+            // $("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
+            //$("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+"><a href=./index.html>"+response.meals[index].strMeal +"</a></p>");
+            $(`#menu${index}`).append("<p><img src="+response.meals[index].strMealThumb+" alt="+response.meals[index].strMeal +"></p>");
+            
+
+          }else {"the id it not there " + response.meals[index].idMeal }
+
+        
+
+
         }
-
-        console.log(typesMealIDS)
       });
-    
-    $.ajax({
-      url: getURL,
-      method: "GET"
-    }).then(function(response) {
-      //console.log(response.meals.length)
-  
-      console.log(response)
-  
-      for (let index = 0; index < response.meals.length; index++) {
-      
-
-
-
-        if (typesMealIDS.includes(response.meals[index].idMeal)) {  
-          console.log(response.meals[index].idMeal)
-          $("#answer").append(`<div class=menu-choice id=menu${index}></div>`)
-          $(`#menu${index}`).append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
-          // $("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+">"+response.meals[index].strMeal +"</p>");
-          //$("#answer").append("<p class=foodLink id="+response.meals[index].idMeal+"><a href=./index.html>"+response.meals[index].strMeal +"</a></p>");
-          $(`#menu${index}`).append("<p><img src="+response.meals[index].strMealThumb+" alt="+response.meals[index].strMeal +"></p>");
-          
-
-        }else {"the id it not there " + response.meals[index].idMeal }
-
-      
-
-
-      }
     });
-  });
-  
+});  
 
 
   
